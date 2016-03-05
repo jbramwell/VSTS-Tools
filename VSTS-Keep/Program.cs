@@ -18,10 +18,13 @@ namespace VSTSKeep
             {
                 // Add the verbose switch programmatically because I am having issues with the attributes
                 var verbose = new SwitchArgument('v', "verbose", "Turns on verbose output.", false);
+                var keepForever = new SwitchArgument('k', "keep", "If specified, sets to \"Keep Forever\"; Otherwise, removes the flag.", false);
+
                 parser.Arguments.Add(verbose);
+                parser.Arguments.Add(keepForever);
 
                 parser.ShowUsageHeader = "Sets or removes \"keep forever\" retention for the specified build number in VSTS.\r\n\r\n" +
-                    "VSTS-KEEP -a <Account> [-u <User ID>] -p <Password> -t <Project> -b <BuildNumber> [-k] <0|1>";
+                    "VSTS-KEEP -a <Account> [-u <User ID>] -p <Password> -t <Project> -b <BuildNumber> [-k]";
                 parser.ShowUsageOnEmptyCommandline = true;
 
                 parser.ExtractArgumentAttributes(cmdLineArgs);
@@ -33,7 +36,7 @@ namespace VSTSKeep
                     var helper = new VstsHelper();
 
                     Console.WriteLine(helper.KeepForever(authentication, cmdLineArgs.Project, cmdLineArgs.BuildNumber,
-                        cmdLineArgs.KeepForever == 1, verbose.Value)
+                        keepForever.Value, verbose.Value)
                         ? "    Retention set successfully."
                         : "    Failed to set retention.");
                 }

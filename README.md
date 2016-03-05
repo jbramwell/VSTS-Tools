@@ -19,18 +19,18 @@ There are multiple command-line arguments for calling VSTS-Keep, including:
 |-u       |No      |Specifies the User ID used to sign into VSTS (optional if using a PAT).         |
 |-p       |Yes     |Specifies the password or Personal Access Token (PAT) used to sign into VSTS.   |
 |-b       |Yes     |Specifies the build number to set retention on/off for.                         |
-|-k       |No      |Set to 1 to keep build forever; else, set to 0. Default = 0.                    |
+|-k       |No      |If specified, sets to "Keep Forever"; Otherwise, removes the flag.              |
 |-v       |No      |If specified, turns on verbose output.                                          |
 
 **Examples**
 
 Set retention to "Keep Forever" while authenticating with Alternate (Basic) Credentals:
 
-    VSTS-Keep -a MyAccount -t MyProject -u someone@hotmail.com -p MyS3cr3tP@ssw0rd -b 20160303.1 -k 1
+    VSTS-Keep -a MyAccount -t MyProject -u someone@hotmail.com -p MyS3cr3tP@ssw0rd -b 20160303.1 -k
 
 Set retention to "Keep Forever" while authenticating with a Personal Access Token (PAT):
 
-    VSTS-Keep -a MyAccount -t MyProject -p aq4atoiecgzpt7gtw54dlzfja7vlr3hbkm2kl2pkjmr32obr5juq -b 20160303.1 -k 1
+    VSTS-Keep -a MyAccount -t MyProject -p aq4atoiecgzpt7gtw54dlzfja7vlr3hbkm2kl2pkjmr32obr5juq -b 20160303.1 -k
 
 Remove retention while authenticating with a Personal Access Token (PAT):
 
