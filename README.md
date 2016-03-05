@@ -2,8 +2,6 @@
 Provided primarily as a set of examples for calling various REST APIs within Visual Studio Team Services (VSTS), VSTS-Tools  is a collection of 
 command-line utilities for interacting with VSTS.
 
-The current set of tools/examples, include:
-
 ## VSTS-Keep
 Allows you to set the retention for a specific build to "Keep Forever" or you can also remove the "Keep Forever" flag so the build will follow The
 existing retention rules as configured for your VSTS project. The build to be modified is designated by passing in the Build Number (not the Build
@@ -39,4 +37,31 @@ Remove retention while authenticating with a Personal Access Token (PAT):
 ## VSTS-Get
 Allows you to download a single file or an entire folder from a Git-based repo in VSTS without the need for a Git client.
 
-**NOTE**: TFVC-based repositories are not yet supported by these tools.
+> **NOTE**: TFVC-based repositories are not yet supported by these tools.
+
+### Usage
+There are multiple command-line arguments for calling VSTS-Keep, including:
+
+|Name     |Required|Comments                                                                          |
+|---------|--------|----------------------------------------------------------------------------------|
+|-a       |Yes     |Specifies the VSTS account to use.                                                |
+|-t       |Yes     |Specifies the name of the VSTS team project.                                      |
+|-r       |Yes     |Specifies the name of the Git repo in VSTS containing the file/folder to download.|
+|-u       |No      |Specifies the User ID used to sign into VSTS (optional if using a PAT).           |
+|-p       |Yes     |Specifies the password or Personal Access Token (PAT) used to sign into VSTS.     |
+|-f       |No      |Specifies the file in VSTS to download.                                           |
+|-o       |No      |Specifies the folder in VSTS to download.                                         |
+|-d       |Yes     |Specifies the destination directory for the download files.                       |
+|-v       |No      |If specified, turns on verbose output.                                            |
+
+> The argument -f or -o must be specified, but not both.
+
+**Examples**
+
+Download a folder named "MyProject/UnitTests" with Verbose set to ON:
+
+    VSTS-Get -a MyAccount -t MyProject -p aq4atoiecgzpt7gtw54dlzfja7vlr3hbkm2kl2pkjmr32obr5juq -r "MyProject" -o "MyProject/UnitTests" -d C:\Downloads -v
+
+Download a file named "MyProject/UnitTests/UnitTests.cs" with Verbose set to ON:
+
+    VSTS-Get -a MyAccount -t MyProject -p aq4atoiecgzpt7gtw54dlzfja7vlr3hbkm2kl2pkjmr32obr5juq -r "MyProject" -f "MyProject/UnitTests/UnitTests.cs" -d C:\Downloads -v
