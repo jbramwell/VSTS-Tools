@@ -27,13 +27,16 @@ namespace VSTSKeep
                 parser.ExtractArgumentAttributes(cmdLineArgs);
                 parser.ParseCommandLine(args);
 
-                var authentication = new BasicAuthentication(cmdLineArgs.Account, cmdLineArgs.UserId, cmdLineArgs.Password);
-                var helper = new VstsHelper();
+                if (parser.ParsingSucceeded)
+                {
+                    var authentication = new BasicAuthentication(cmdLineArgs.Account, cmdLineArgs.UserId, cmdLineArgs.Password);
+                    var helper = new VstsHelper();
 
-                Console.WriteLine(helper.KeepForever(authentication, cmdLineArgs.Project, cmdLineArgs.BuildNumber,
-                    cmdLineArgs.KeepForever == 1, verbose.Value)
-                    ? "    Retention set successfully."
-                    : "    Failed to set retention.");
+                    Console.WriteLine(helper.KeepForever(authentication, cmdLineArgs.Project, cmdLineArgs.BuildNumber,
+                        cmdLineArgs.KeepForever == 1, verbose.Value)
+                        ? "    Retention set successfully."
+                        : "    Failed to set retention.");
+                }
             }
             catch (Exception ex)
             {

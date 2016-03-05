@@ -28,28 +28,32 @@ namespace VSTSGet
                 parser.ExtractArgumentAttributes(cmdLineArgs);
                 parser.ParseCommandLine(args);
 
-                var authentication = new BasicAuthentication(cmdLineArgs.Account, cmdLineArgs.UserId, cmdLineArgs.Password);
-
-                if (!string.IsNullOrEmpty(cmdLineArgs.FilePath))
+                if (parser.ParsingSucceeded)
                 {
-                    // If the --file argument was specified, then assume we're downloading a single file
-                    var helper = new VstsHelper();
 
-                    Console.WriteLine(helper.DownloadFile(authentication, cmdLineArgs.Project, cmdLineArgs.Repo,
-                        cmdLineArgs.FilePath, cmdLineArgs.Destination,
-                        verbose.Value)
-                        ? "    File download successful."
-                        : "    File download failed.");
-                }
-                else if (!string.IsNullOrEmpty(cmdLineArgs.FolderPath))
-                {
-                    var helper = new VstsHelper();
+                    var authentication = new BasicAuthentication(cmdLineArgs.Account, cmdLineArgs.UserId, cmdLineArgs.Password);
 
-                    Console.WriteLine(helper.DownloadFolder(authentication, cmdLineArgs.Project, cmdLineArgs.Repo,
-                        cmdLineArgs.FolderPath, cmdLineArgs.Destination,
-                        verbose.Value)
-                        ? "    Folder download successful."
-                        : "    Folder download failed.");
+                    if (!string.IsNullOrEmpty(cmdLineArgs.FilePath))
+                    {
+                        // If the --file argument was specified, then assume we're downloading a single file
+                        var helper = new VstsHelper();
+
+                        Console.WriteLine(helper.DownloadFile(authentication, cmdLineArgs.Project, cmdLineArgs.Repo,
+                            cmdLineArgs.FilePath, cmdLineArgs.Destination,
+                            verbose.Value)
+                            ? "    File download successful."
+                            : "    File download failed.");
+                    }
+                    else if (!string.IsNullOrEmpty(cmdLineArgs.FolderPath))
+                    {
+                        var helper = new VstsHelper();
+
+                        Console.WriteLine(helper.DownloadFolder(authentication, cmdLineArgs.Project, cmdLineArgs.Repo,
+                            cmdLineArgs.FolderPath, cmdLineArgs.Destination,
+                            verbose.Value)
+                            ? "    Folder download successful."
+                            : "    Folder download failed.");
+                    }
                 }
             }
             catch (Exception ex)
