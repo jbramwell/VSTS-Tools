@@ -1,5 +1,5 @@
 # VSTS-Tools
-[](https://devmatter.visualstudio.com/DefaultCollection/_apis/public/build/definitions/bd278cd4-6a00-4e7d-9f77-026bdef28849/10/badge)
+![Build Status](https://devmatter.visualstudio.com/DefaultCollection/_apis/public/build/definitions/bd278cd4-6a00-4e7d-9f77-026bdef28849/10/badge)
 
 VSTS-Tools is provided primarily as a set of examples for calling various REST APIs within Visual Studio Team Services (VSTS), VSTS-Tools  is a collection of 
 command-line utilities for interacting with VSTS.
