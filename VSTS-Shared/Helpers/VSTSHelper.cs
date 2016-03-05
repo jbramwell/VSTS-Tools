@@ -144,7 +144,7 @@ namespace VSTSShared.Helpers
                     }
 
                     // Now we need to make a PATCH call to set the retention accordingly
-                    url = $"{authentication.AccountUrl}/{project}/_apis/build/builds/{buildNumber}?api-version=2.0";
+                    url = $"{authentication.AccountUrl}/{project}/_apis/build/builds/{buildId}?api-version=2.0";
 
                     // Setup the input to the API call
                     var model = new Retention { keepForever = keepForever };
