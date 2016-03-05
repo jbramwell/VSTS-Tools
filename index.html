@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>VSTS-Tools by jbramwell</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>VSTS-Tools</h1>
+        <h2>Various command-line utilities for interacting with Visual Studio Team Services (VSTS)</h2>
+        <a href="https://github.com/jbramwell/VSTS-Tools" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="vsts-tools" class="anchor" href="#vsts-tools" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>VSTS-Tools</h1>
+
+<p>Provided primarily as a set of examples for calling various REST APIs within Visual Studio Team Services (VSTS), VSTS-Tools  is a collection of 
+command-line utilities for interacting with VSTS.</p>
+
+<p>The current set of tools/examples, include:</p>
+
+<h2>
+<a id="vsts-keep" class="anchor" href="#vsts-keep" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>VSTS-Keep</h2>
+
+<p>Allows you to set the retention for a specific build to "Keep Forever" or you can also remove the "Keep Forever" flag so the build will follow The
+existing retention rules as configured for your VSTS project. The build to be modified is designated by passing in the Build Number (not the Build
+ID). The Build Number is mapped to the Build ID internally and the retention is set accordingly.</p>
+
+<h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h3>
+
+<p>There are multiple command-line arguments for calling VSTS-Keep, including:</p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-a</td>
+<td>Yes</td>
+<td>Specifies the VSTS account to use.</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>Yes</td>
+<td>Specifies the name of the VSTS team project containing the build to be modified.</td>
+</tr>
+<tr>
+<td>-u</td>
+<td>No</td>
+<td>Specifies the User ID used to sign into VSTS (optional if using a PAT).</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>Yes</td>
+<td>Specifies the password or Personal Access Token (PAT) used to sign into VSTS.</td>
+</tr>
+<tr>
+<td>-b</td>
+<td>Yes</td>
+<td>Specifies the build number to set retention on/off for.</td>
+</tr>
+<tr>
+<td>-k</td>
+<td>No</td>
+<td>Set to 1 to keep build forever; else, set to 0. Default = 0.</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>No</td>
+<td>If specified, turns on verbose output.</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Examples</strong></p>
+
+<p>Set retention to "Keep Forever" while authenticating with Alternate (Basic) Credentals:</p>
+
+<pre><code>VSTS-Keep -a MyAccount -t MyProject -u someone@hotmail.com -p MyS3cr3tP@ssw0rd -b 20160303.1 -k 1
+</code></pre>
+
+<p>Set retention to "Keep Forever" while authenticating with a Personal Access Token (PAT):</p>
+
+<pre><code>VSTS-Keep -a MyAccount -t MyProject -p aq4atoiecgzpt7gtw54dlzfja7vlr3hbkm2kl2pkjmr32obr5juq -b 20160303.1 -k 1
+</code></pre>
+
+<p>Remove retention while authenticating with a Personal Access Token (PAT):</p>
+
+<pre><code>VSTS-Keep -a MyAccount -t MyProject -p aq4atoiecgzpt7gtw54dlzfja7vlr3hbkm2kl2pkjmr32obr5juq -b 20160303.1
+</code></pre>
+
+<h2>
+<a id="vsts-get" class="anchor" href="#vsts-get" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>VSTS-Get</h2>
+
+<p>Allows you to download a single file or an entire folder from a Git-based repo in VSTS without the need for a Git client.</p>
+
+<p><strong>NOTE</strong>: TFVC-based repositories are not yet supported by these tools.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/jbramwell/VSTS-Tools/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/jbramwell/VSTS-Tools/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/jbramwell/VSTS-Tools"></a> is maintained by <a href="https://github.com/jbramwell">jbramwell</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
