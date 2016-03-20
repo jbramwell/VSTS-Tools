@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25115.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSTS-Get", "VSTS-Get\VSTS-Get.csproj", "{E59F075F-6C5E-4E17-BB45-FCE53A2F7923}"
 EndProject
@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{5D054FBA-8B40-41FE-8980-00E9DA29ABAC}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
+		VSTS-Tools.json = VSTS-Tools.json
 	EndProjectSection
 EndProject
 Global
