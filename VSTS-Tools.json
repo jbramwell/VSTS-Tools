@@ -4,6 +4,6 @@
     {
       "source": "$(build.sourcesDirectory)\**\bin\release\*.exe;$(build.sourcesDirectory)\**\VSTS-Shared\**\bin\release\*.dll",
       "target": "/"
-    },
+    }
   ]
 }
