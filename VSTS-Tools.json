@@ -2,7 +2,7 @@
   "targetroot": "",
   "content": [
     {
-      "source": "**/bin/release/*.exe",
+      "source": "$(Build.ArtifactStagingDirectory)",
       "target": "/"
     }
   ]
