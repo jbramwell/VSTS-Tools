@@ -2,7 +2,7 @@
   "targetroot": "",
   "content": [
     {
-      "source": "**/s/**/bin/release/*.exe",
+      "source": "**/bin/release/*.exe",
       "target": "/"
     }
   ]
