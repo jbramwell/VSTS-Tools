@@ -2,7 +2,7 @@
   "targetroot": "",
   "content": [
     {
-      "source": "$(Build.ArtifactStagingDirectory)/*.*",
+      "source": "**/a/**/*.*",
       "target": "/"
     }
   ]
