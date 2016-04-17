@@ -1,0 +1,54 @@
+{
+  "id": "366a7ad0-04d2-11e6-8e12-05fe11e8e577",
+  "name": "VSTSToolsListFiles",
+  "friendlyName": "VSTS-Tools List Files",
+  "description": "Recursively lists all files and folders beneath the specified folder.",
+  "author": "Moonspace Labs, LLC",
+  "helpMarkDown": "Recursively lists all files and folders beneath the specified folder.",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [ ],
+  "version": {
+    "Major": "0",
+    "Minor": "21",
+    "Patch": "0"
+  },
+  "minimumAgentVersion": "1.83.0",
+  "instanceNameFormat": "VSTSToolsListFiles $(message)",
+  "groups": [
+    {
+      "name": "advanced",
+      "displayName": "Advanced",
+      "isExpanded": true
+    }
+  ],
+  "inputs": [
+    {
+      "name": "rootdir",
+      "type": "filePath",
+      "label": "Root Directory",
+      "defaultValue": "$(Build.SourcesDirectory)",
+      "required": false,
+      "helpMarkDown": "The root directory to list files and folders under when this task is ran."
+    },
+    {
+      "name": "debugonly",
+      "type": "boolean",
+      "label": "Execute on Debug Only",
+      "defaultValue": false,
+      "required": false,
+      "groupName": "advanced",
+      "helpMarkDown": "If checked, executes only when **system.debug** is set to **true**."
+    }
+  ],
+  "execution": {
+    "PowerShell": {
+      "target": "$(currentDirectory)\\listfiles.ps1",
+      "argumentFormat": "",
+      "workingDirectory": "$(currentDirectory)"
+    }
+  }
+}

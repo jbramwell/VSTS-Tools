@@ -1,0 +1,46 @@
+{
+  "id": "6a1c6d70-04d2-11e6-87b2-99539d5be29e",
+  "name": "VSTSToolsListVariables",
+  "friendlyName": "VSTS-Tools List Variables",
+  "description": "Lists all variables defined at the time this task is ran.",
+  "author": "Moonspace Labs, LLC",
+  "helpMarkDown": "Lists all variables defined at the time this task is ran.",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [ ],
+  "version": {
+    "Major": "0",
+    "Minor": "21",
+    "Patch": "0"
+  },
+  "minimumAgentVersion": "1.83.0",
+  "instanceNameFormat": "VSTSToolsListVariables $(message)",
+  "groups": [
+    {
+      "name": "advanced",
+      "displayName": "Advanced",
+      "isExpanded": true
+    }
+  ],
+  "inputs": [
+    {
+      "name": "debugonly",
+      "type": "boolean",
+      "label": "Execute on Debug Only",
+      "defaultValue": false,
+      "required": false,
+      "groupName": "advanced",
+      "helpMarkDown": "If checked, executes only when **system.debug** is set to **true**."
+    }
+  ],
+  "execution": {
+    "PowerShell": {
+      "target": "$(currentDirectory)\\listvariables.ps1",
+      "argumentFormat": "",
+      "workingDirectory": "$(currentDirectory)"
+    }
+  }
+}

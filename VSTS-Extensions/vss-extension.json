@@ -1,0 +1,52 @@
+﻿{
+  "manifestVersion": 1,
+  "id": "vsts-tools-build-extensions",
+  "name": "VSTS-Tools Build Extensions",
+  "version": "0.0.21",
+  "publisher": "moonspace-labs-llc",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "Various build tasks to help extend diagnostics, retention setting, etc.",
+  "categories": [
+    "Build and release"
+  ],
+  "icons": {
+    "default": "extension-icon.png"
+  },
+  "files": [
+    {
+      "path": "VSTSToolsListFiles"
+    },
+    {
+      "path": "VSTSToolsListVariables"
+    }
+  ],
+  "scopes": [
+    "vso.build_execute"
+  ],
+  "contributions": [
+    {
+      "id": "vsts-ListFiles",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "VSTSToolsListFiles"
+      }
+    },
+    {
+      "id": "vsts-ListVariables",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "VSTSToolsListVariables"
+      }
+    }
+  ]
+}
