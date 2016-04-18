@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "vsts-tools-build-extensions",
   "name": "VSTS-Tools Build Extensions",
-  "version": "0.0.21",
+  "version": "1.0.0",
   "publisher": "moonspace-labs-llc",
   "targets": [
     {
@@ -13,6 +13,21 @@
   "categories": [
     "Build and release"
   ],
+  "tags": [
+    "diagnostics",
+    "list files",
+    "list folders"
+  ],
+  "screenshots": [
+    {
+      "path": "screenshots/extensions.png"
+    }
+  ],
+  "content": {
+    "details": {
+      "path": "overview.md"
+    }
+  },
   "icons": {
     "default": "extension-icon.png"
   },
@@ -48,5 +63,26 @@
         "name": "VSTSToolsListVariables"
       }
     }
-  ]
+  ],
+  "links": {
+    "home": {
+      "uri": "https://blog.devmatter.com"
+    },
+    "getstarted": {
+      "uri": "http://blog.devmatter.com/vsts-tools-now-on-github/"
+    },
+    "repository": {
+      "uri": "https://github.com/jbramwell/VSTS-Tools"
+    },
+    "support": {
+      "uri": "https://github.com/jbramwell/VSTS-Tools/issues"
+    },
+    "issues": {
+      "uri": "https://github.com/jbramwell/VSTS-Tools/issues"
+    }
+  },
+  "branding": {
+    "color": "#1EA5CE",
+    "theme": "dark"
+  }
 }
