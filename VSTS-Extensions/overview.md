@@ -9,11 +9,14 @@ This extension will list out (in the log) all files beneath the folder specified
 * Root Directory - all files and folders beneath the root directory will be listed (recursively).
 * Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
 
+![VSTS-List Files Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/ListFiles.png?raw=true)
 
 ## VSTS-List Variables
 This extension will list out (in the log) all variables that are defined at the time this extension is executed. There is one parameter that can be set with this task:
 
 * Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
+
+![VSTS-List Variables Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/ListVariables.png?raw=true)
 
 ## VSTS-Keep
 *Coming Soon!* This extension allows you to set the retention for a specific build to *Keep Forever*.
