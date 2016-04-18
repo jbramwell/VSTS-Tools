@@ -3,6 +3,7 @@
   "id": "vsts-tools-build-extensions",
   "name": "VSTS-Tools Build Extensions",
   "version": "1.0.0",
+  "public": true,
   "publisher": "moonspace-labs-llc",
   "targets": [
     {
@@ -69,7 +70,7 @@
       "uri": "https://blog.devmatter.com"
     },
     "getstarted": {
-      "uri": "http://blog.devmatter.com/vsts-tools-now-on-github/"
+      "uri": "http://blog.devmatter.com/vsts-tools-build-extensions/"
     },
     "repository": {
       "uri": "https://github.com/jbramwell/VSTS-Tools"
