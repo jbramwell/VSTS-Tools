@@ -19,15 +19,22 @@ This extension will list out (in the log) all variables that are defined at the 
 ![VSTS-List Variables Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/ListVariables.png?raw=true)
 
 ## VSTS-Keep
-*Coming Soon!* This extension allows you to set the retention for a specific build to *Keep Forever*.
+This extension allows you to set the retention for a specific build to *Keep Forever*.
+
+* Target Branch - specifies the name of the branch that must be built in order for the task to run. For example, if you set the Target Branch to 'master' then the build will be set to **keep forever** only when the master branch is built.
+* Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
+
+![VSTS-List Variables Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/keep.png?raw=true)
 
 # Road Map
-|Release|Description                                |
-|-------|-------------------------------------------|
-| 1.0.0 | Initial release.                          |
-| 2.0.0 | VSTS-Keep task added.                |
-| 2.1.0 | Node support (currently PowerShell only). |
-| x.y.z | TBD... (based on requests)                |
+|Release|Description                                |Status    |
+|-------|-------------------------------------------|----------|
+| 1.0.0 | Initial release                           |Completed |
+| 1.1.0 | VSTS-Keep task                            |Completed |
+|       | VSTS-List-Apps (list installed apps)      |          |
+|       | VSTS-List-System-Specs                    |          |
+|       | Node support (currently PowerShell only). |          |
+|       | TBD... (based on requests)                |          |
 
 # Contact Us
 * [Follow us on Twitter](https://twitter.com/moonspacelabs)

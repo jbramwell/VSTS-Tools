@@ -49,6 +49,7 @@
   <ItemGroup>
     <Content Include="extension-icon.png" />
     <Content Include="screenshots\extensions.png" />
+    <Content Include="screenshots\keep.png" />
     <Content Include="screenshots\ListFiles.png" />
     <Content Include="screenshots\ListVariables.png" />
     <Content Include="VSTSToolsKeep\icon.png" />
