@@ -3,36 +3,36 @@ This extension provides several build tasks to help you diagnose your builds as 
 
 # Extensions
 
-### VSTS-List Files
+## VSTS-Tools List Files
 This extension will list out (in the log) all files beneath the folder specified as the *Root Folder*. There are two parameters that can be set with this task:
 
 * Root Directory - all files and folders beneath the root directory will be listed (recursively).
 * Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
 
-![VSTS-List Files Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/ListFiles.png?raw=true)
+![VSTS-Tools List Files Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/ListFiles.png?raw=true)
 
-## VSTS-List Variables
+## VSTS-Tools List Variables
 This extension will list out (in the log) all variables that are defined at the time this extension is executed. There is one parameter that can be set with this task:
 
 * Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
 
-![VSTS-List Variables Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/ListVariables.png?raw=true)
+![VSTS-Tools List Variables Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/ListVariables.png?raw=true)
 
-## VSTS-Keep
+## VSTS-Tools Keep
 This extension allows you to set the retention for a specific build to *Keep Forever*.
 
 * Target Branch - specifies the name of the branch that must be built in order for the task to run. For example, if you set the Target Branch to 'master' then the build will be set to **keep forever** only when the master branch is built.
 * Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
 
-![VSTS-List Variables Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/keep.png?raw=true)
+![VSTS-Tools Keep Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/keep.png?raw=true)
 
 
-## VSTS-Keep
+## VSTS-Tools List Apps
 This extension provides you with a list of all applications installed on the build agent at the time the build is executed.
 
 * Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
 
-![VSTS-List Variables Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/ListApps.png?raw=true)
+![VSTS-Tools List Apps Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/ListApps.png?raw=true)
 
 # Road Map
 |Release|Description                                |Status    |
