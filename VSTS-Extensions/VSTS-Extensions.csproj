@@ -38,6 +38,8 @@
   <ItemGroup>
     <None Include="overview.md" />
     <None Include="vss-extension.json" />
+    <None Include="VSTSToolsListApps\listapps.ps1" />
+    <None Include="VSTSToolsListApps\task.json" />
     <None Include="VSTSToolsKeep\keepbuild.ps1" />
     <None Include="VSTSToolsKeep\task.json" />
     <None Include="VSTSToolsListFiles\listfiles.ps1" />
@@ -50,8 +52,11 @@
     <Content Include="extension-icon.png" />
     <Content Include="screenshots\extensions.png" />
     <Content Include="screenshots\keep.png" />
+    <Content Include="screenshots\ListApps.png" />
     <Content Include="screenshots\ListFiles.png" />
     <Content Include="screenshots\ListVariables.png" />
+    <Content Include="VSTSToolsListApps\icon.png" />
+    <Content Include="VSTSToolsListApps\listapps.js" />
     <Content Include="VSTSToolsKeep\icon.png" />
     <Content Include="VSTSToolsKeep\keepbuild.js" />
     <Content Include="VSTSToolsListFiles\icon.png" />

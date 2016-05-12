@@ -26,15 +26,23 @@ This extension allows you to set the retention for a specific build to *Keep For
 
 ![VSTS-List Variables Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/keep.png?raw=true)
 
+
+## VSTS-Keep
+This extension provides you with a list of all applications installed on the build agent at the time the build is executed.
+
+* Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
+
+![VSTS-List Variables Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/ListApps.png?raw=true)
+
 # Road Map
 |Release|Description                                |Status    |
 |-------|-------------------------------------------|----------|
 | 1.0.0 | Initial release                           |Completed |
 | 1.1.0 | VSTS-Keep task                            |Completed |
-|       | VSTS-List-Apps (list installed apps)      |          |
+| 1.2.0 | VSTS-List-Apps (list installed apps)      |Completed |
 |       | VSTS-List-System-Specs                    |          |
 |       | Node support (currently PowerShell only). |          |
-|       | TBD... (based on requests)                |          |
+|       | TBD... (based on requests)                |          ||
 
 # Contact Us
 * [Follow us on Twitter](https://twitter.com/moonspacelabs)

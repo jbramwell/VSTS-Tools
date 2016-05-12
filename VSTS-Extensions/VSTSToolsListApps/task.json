@@ -1,0 +1,46 @@
+{
+  "id": "40F1065A-5B8D-4E93-BB3D-7110105E8730",
+  "name": "VSTSToolsListApps",
+  "friendlyName": "VSTS-Tools List Apps",
+  "description": "Lists all applications installed on the active build agent.",
+  "author": "Moonspace Labs, LLC",
+  "helpMarkDown": "Lists all applications installed on the active build agent.",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [ "DotNetFramework" ],
+  "version": {
+    "Major": "1",
+    "Minor": "0",
+    "Patch": "0"
+  },
+  "minimumAgentVersion": "1.99.0",
+  "instanceNameFormat": "VSTSToolsListApps $(message)",
+  "groups": [
+    {
+      "name": "advanced",
+      "displayName": "Advanced",
+      "isExpanded": true
+    }
+  ],
+  "inputs": [
+    {
+      "name": "debugonly",
+      "type": "boolean",
+      "label": "Execute on Debug Only",
+      "defaultValue": false,
+      "required": false,
+      "groupName": "advanced",
+      "helpMarkDown": "If checked, executes only when **system.debug** is set to **true**."
+    }
+  ],
+  "execution": {
+    "PowerShell": {
+      "target": "$(currentDirectory)\\listapps.ps1",
+      "argumentFormat": "",
+      "workingDirectory": "$(currentDirectory)"
+    }
+  }
+}

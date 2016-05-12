@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "vsts-tools-build-extensions",
   "name": "VSTS-Tools Build Extensions",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "public": true,
   "publisher": "moonspace-labs-llc",
   "targets": [
@@ -41,6 +41,9 @@
     },
     {
       "path": "VSTSToolsKeep"
+    },
+    {
+      "path": "VSTSToolsListApps"
     }
   ],
   "scopes": [
@@ -75,6 +78,16 @@
       ],
       "properties": {
         "name": "VSTSToolsKeep"
+      }
+    },
+    {
+      "id": "vsts-ListApps",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "VSTSToolsListApps"
       }
     }
   ],
