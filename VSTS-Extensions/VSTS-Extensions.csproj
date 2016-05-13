@@ -55,6 +55,7 @@
     <Content Include="screenshots\ListApps.png" />
     <Content Include="screenshots\ListFiles.png" />
     <Content Include="screenshots\ListVariables.png" />
+    <Content Include="screenshots\OAuth.png" />
     <Content Include="VSTSToolsListApps\icon.png" />
     <Content Include="VSTSToolsListApps\listapps.js" />
     <Content Include="VSTSToolsKeep\icon.png" />

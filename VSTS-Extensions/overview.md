@@ -26,6 +26,9 @@ This extension allows you to set the retention for a specific build to *Keep For
 
 ![VSTS-Tools Keep Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/keep.png?raw=true)
 
+**IMPORTANT!** Before you can make use of the *VSTS-Tools Keep* task, you must first configure your account to allow the use of the build process OAuth token. To do this, go to the **Options** tab of the build definition and select *Allow Scripts to Access OAuth Token*.
+![VSTS-Tools Keep Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/OAuth.png?raw=true)
+
 
 ## VSTS-Tools List Apps
 This extension provides you with a list of all applications installed on the build agent at the time the build is executed.
