@@ -1,7 +1,12 @@
-﻿# VSTS-Tools
-This extension provides several build tasks to help you diagnose your builds as well as control the retention of completed builds. The initial release has some limitations so see the Road Map outlined below to get an idea of what's coming next for this set of extensions.
+## VSTS-Tools
+This extension provides several build tasks that can help you diagnose your builds as well as control the retention of completed builds.
 
-# Extensions
+## VSTS-Tools List Apps
+This extension provides you with a list of all applications installed on the build agent at the time the build is executed.
+
+* Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
+
+![VSTS-Tools List Apps Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/ListApps.png?raw=true)
 
 ## VSTS-Tools List Files
 This extension will list out (in the log) all files beneath the folder specified as the *Root Folder*. There are two parameters that can be set with this task:
@@ -27,17 +32,10 @@ This extension allows you to set the retention for a specific build to *Keep For
 ![VSTS-Tools Keep Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/keep.png?raw=true)
 
 **IMPORTANT!** Before you can make use of the *VSTS-Tools Keep* task, you must first configure your account to allow the use of the build process OAuth token. To do this, go to the **Options** tab of the build definition and select *Allow Scripts to Access OAuth Token*.
+
 ![VSTS-Tools Keep Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/OAuth.png?raw=true)
 
-
-## VSTS-Tools List Apps
-This extension provides you with a list of all applications installed on the build agent at the time the build is executed.
-
-* Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
-
-![VSTS-Tools List Apps Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/ListApps.png?raw=true)
-
-# Road Map
+## Road Map
 |Release|Description                                |Status    |
 |-------|-------------------------------------------|----------|
 | 1.0.0 | Initial release                           |Completed |
@@ -47,6 +45,8 @@ This extension provides you with a list of all applications installed on the bui
 |       | Node support (currently PowerShell only). |          |
 |       | TBD... (based on requests)                |          ||
 
-# Contact Us
+## Feedback and Support
+If you like this set of extensions, please leave a review and rating. If you have any suggestions and/or problems, please [file an issue so we can get it resolved](https://github.com/jbramwell/VSTS-Tools/issues).
+## Contact Us
 * [Follow us on Twitter](https://twitter.com/moonspacelabs)
-* [File an issue on GitHub](https://github.com/jbramwell/VSTS-Tools/issues)
+* [Follow us on Facebook](https://www.facebook.com/MoonspaceLabs/)
