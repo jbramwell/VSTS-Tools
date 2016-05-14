@@ -1,52 +1,61 @@
 ## VSTS-Tools
-This extension provides several build tasks that can help you diagnose your builds as well as control the retention of completed builds.
+This extension provides several build tasks that can help you diagnose your builds as well as control the retention of completed builds. The tasks are also useful for keeping a running history of environment variables, files and installed apps on your build agents.
 
 ## VSTS-Tools List Apps
-This extension provides you with a list of all applications installed on the build agent at the time the build is executed.
+This extension provides you with a list of all applications installed on the build agent at the time the build is executed. This task is especially useful on hosted build agents where you do not have direct access to the file system.
+
+There is one parameter that can be set with this task:
 
 * Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
 
-![VSTS-Tools List Apps Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/ListApps.png?raw=true)
+![VSTS-Tools List Apps Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/db6926620a6d8208afeab44eed32dd385299210b/VSTS-Extensions/screenshots/ListApps.png)
 
 ## VSTS-Tools List Files
-This extension will list out (in the log) all files beneath the folder specified as the *Root Folder*. There are two parameters that can be set with this task:
+This extension will list out (in the log) all files beneath the folder specified as the *Root Folder*. This task can be especially useful on hosted build agents where you do not have direct access to the file system.
+
+There are two parameters that can be set with this task:
 
 * Root Directory - all files and folders beneath the root directory will be listed (recursively).
 * Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
 
-![VSTS-Tools List Files Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/ListFiles.png?raw=true)
+![VSTS-Tools List Files Image](https://github.com/jbramwell/VSTS-Tools/blob/db6926620a6d8208afeab44eed32dd385299210b/VSTS-Extensions/screenshots/ListFiles.png?raw=true)
 
 ## VSTS-Tools List Variables
-This extension will list out (in the log) all variables that are defined at the time this extension is executed. There is one parameter that can be set with this task:
+This extension will list out (in the log) all variables that are defined at the time this extension is executed. This task can be especially useful on hosted build agents where you do not have direct access to the file system.
+
+There is one parameter that can be set with this task:
 
 * Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
 
-![VSTS-Tools List Variables Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/ListVariables.png?raw=true)
+![VSTS-Tools List Variables Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/db6926620a6d8208afeab44eed32dd385299210b/VSTS-Extensions/screenshots/ListVariables.png)
 
 ## VSTS-Tools Keep
-This extension allows you to set the retention for a specific build to *Keep Forever*.
+This extension allows you to set the retention for a build to *Keep Forever*. This is especially handy if you are making use of a 3rd party release tool (e.g. Octopus Deploy) or a custom release process and you want to set the retention after completing the deployment-related build tasks.
+
+There are two parameters that can be set with this task:
 
 * Target Branch - specifies the name of the branch that must be built in order for the task to run. For example, if you set the Target Branch to 'master' then the build will be set to **keep forever** only when the master branch is built.
 * Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
 
-![VSTS-Tools Keep Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/keep.png?raw=true)
-
-**IMPORTANT!** Before you can make use of the *VSTS-Tools Keep* task, you must first configure your account to allow the use of the build process OAuth token. To do this, go to the **Options** tab of the build definition and select *Allow Scripts to Access OAuth Token*.
+**IMPORTANT:** Before you can make use of the *VSTS-Tools Keep* task, you must first configure your account to allow the use of the build process OAuth token. To do this, go to the **Options** tab of the build definition and select **Allow Scripts to Access OAuth Token**.
 
 ![VSTS-Tools Keep Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/OAuth.png?raw=true)
 
-## Road Map
-|Release|Description                                |Status    |
-|-------|-------------------------------------------|----------|
-| 1.0.0 | Initial release                           |Completed |
-| 1.1.0 | VSTS-Keep task                            |Completed |
-| 1.2.0 | VSTS-List-Apps (list installed apps)      |Completed |
-|       | VSTS-List-System-Specs                    |          |
-|       | Node support (currently PowerShell only). |          |
-|       | TBD... (based on requests)                |          ||
+![VSTS-Tools Keep Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/db6926620a6d8208afeab44eed32dd385299210b/VSTS-Extensions/screenshots/keep.png)
+
+## Release History/Road Map
+|Release|Description                                |
+|-------|-------------------------------------------|
+| 1.0.0 | Initial release                           |
+| 1.1.0 | VSTS-Keep task                            |
+| 1.2.0 | VSTS-List-Apps (list installed apps)      |
+|       | VSTS-List-System-Specs                    |
+|       | TBD... (based on requests)                |
+
 
 ## Feedback and Support
 If you like this set of extensions, please leave a review and rating. If you have any suggestions and/or problems, please [file an issue so we can get it resolved](https://github.com/jbramwell/VSTS-Tools/issues).
+
 ## Contact Us
 * [Follow us on Twitter](https://twitter.com/moonspacelabs)
 * [Follow us on Facebook](https://www.facebook.com/MoonspaceLabs/)
