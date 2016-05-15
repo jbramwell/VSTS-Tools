@@ -44,6 +44,8 @@
     <None Include="VSTSToolsKeep\task.json" />
     <None Include="VSTSToolsListFiles\listfiles.ps1" />
     <None Include="VSTSToolsListFiles\task.json" />
+    <None Include="VSTSToolsListSystemSpecs\listsystemspecs.ps1" />
+    <None Include="VSTSToolsListSystemSpecs\task.json" />
     <None Include="VSTSToolsListVariables\listvariables.ps1" />
     <None Include="VSTSToolsListVariables\task.json" />
   </ItemGroup>
@@ -62,6 +64,8 @@
     <Content Include="VSTSToolsKeep\keepbuild.js" />
     <Content Include="VSTSToolsListFiles\icon.png" />
     <Content Include="VSTSToolsListFiles\listfiles.js" />
+    <Content Include="VSTSToolsListSystemSpecs\icon.png" />
+    <Content Include="VSTSToolsListSystemSpecs\listsystemspecs.js" />
     <Content Include="VSTSToolsListVariables\icon.png" />
     <Content Include="VSTSToolsListVariables\listvariables.js" />
   </ItemGroup>
