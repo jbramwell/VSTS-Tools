@@ -11,12 +11,19 @@ import-module "Microsoft.TeamFoundation.DistributedTask.Task.Common"
 if ($debugonly -eq "false" -or (($debugonly -eq "true") -and ($env:SYSTEM_DEBUG -eq "true")))
 {
   $result = gwmi Win32_OperatingSystem 
+  $system = get-wmiobject Win32_ComputerSystem
   $timeZoneInfo = [TimeZoneInfo]::Local
 
+  Write-Output(" ")
   Write-Output("SERVER")
   Write-Output("------")
   Write-Output("Computer Name:                 $($result.PSComputerName)")
-  Write-Output("")
+  Write-Output("Manufacturer:                  $($system.Manufacturer)")
+  Write-Output("Model:                         $($system.Model)")
+  Write-Output("# of Processors:               $($system.NumberOfProcessors)")
+  Write-Output("# of Logical Processors:       $($system.NumberOfLogicalProcessors)")
+
+  Write-Output(" ")
   Write-Output("OPERATING SYSTEM")
   Write-Output("----------------")
   Write-Output("Operating System:              $($result.Caption)")
@@ -24,7 +31,8 @@ if ($debugonly -eq "false" -or (($debugonly -eq "true") -and ($env:SYSTEM_DEBUG 
   Write-Output("Service Pack Version:          {0}.{1}" -f $result.ServicePackMajorVersion, $result.ServicePackMinorVersion)
   Write-Output("System Directory:              $($result.SystemDirectory)")
   Write-Output("Windows Directory:             $($result.WindowsDirectory)")
-  Write-Output("")
+
+  Write-Output(" ")
   Write-Output("TIME ZONE INFORMATION")
   Write-Output("---------------------")
   Write-Output("ID:                            $($timeZoneInfo.Id)")
@@ -33,12 +41,14 @@ if ($debugonly -eq "false" -or (($debugonly -eq "true") -and ($env:SYSTEM_DEBUG 
   Write-Output("DaylightName:                  $($timeZoneInfo.DaylightName)")
   Write-Output("BaseUtcOffset:                 $($timeZoneInfo.BaseUtcOffset)")
   Write-Output("Supports Daylight Saving Time: $($timeZoneInfo.SupportsDaylightSavingTime)")
-  Write-Output("")
+
+  Write-Output(" ")
   Write-Output("SYSTEM MEMORY")
   Write-Output("-------------")
   Write-Output("Total Memory:                  {0:###,###,###,###.0} GB" -f ($result.TotalVisibleMemorySize / (1048576)))
   Write-Output("Free Memory:                   {0:###,###,###,###.0} GB" -f ($result.FreePhysicalMemory / (1048576)))
-  Write-Output("")
+
+  Write-Output(" ")
   Write-Output("SYSTEM DRIVES")
   Write-Output("-------------")
   Get-PSDrive
