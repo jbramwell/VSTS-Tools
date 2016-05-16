@@ -28,7 +28,8 @@ if ($debugonly -eq "false" -or (($debugonly -eq "true") -and ($env:SYSTEM_DEBUG 
   Write-Output("----------------")
   Write-Output("Operating System:              $($result.Caption)")
   Write-Output("Operating System Version:      $($result.Version)")
-  Write-Output("Service Pack Version:          {0}.{1}" -f $result.ServicePackMajorVersion, $result.ServicePackMinorVersion)
+  Write-Output("OS Service Pack Version:       {0}.{1}" -f $result.ServicePackMajorVersion, $result.ServicePackMinorVersion)
+  Write-Output("OS Install Date:               {0}" -f ([WMI]'').ConvertToDateTime((Get-WmiObject Win32_OperatingSystem).InstallDate))
   Write-Output("System Directory:              $($result.SystemDirectory)")
   Write-Output("Windows Directory:             $($result.WindowsDirectory)")
 
@@ -50,6 +51,17 @@ if ($debugonly -eq "false" -or (($debugonly -eq "true") -and ($env:SYSTEM_DEBUG 
 
   Write-Output(" ")
   Write-Output("SYSTEM DRIVES")
-  Write-Output("-------------")
-  Get-PSDrive
+  Write-Output(" ")
+  Write-Output("DRIVE      VOLUME                      FREE           TOTAL")
+  Write-Output("-----      -------             ------------    ------------")
+
+  $drives = Get-PSDrive | 
+       Where-Object {$_.Provider -Like "*\FileSystem"} |
+       Sort-Object -Property Name
+
+  $drives | ForEach-Object {Write-Output("{0} {1}  {2} GB {3} GB" -f 
+      ($_.Name + ":").PadRight(10, " "), 
+       $_.Description.PadRight(15, " "), 
+      ($_.Free / 1073741824).ToString("###,###,###,##0.0").PadLeft(12, " "), 
+      (($_.Free + $_.Used) / 1073741824).ToString("###,###,###,##0.0").PadLeft(12, " "))}
 }
