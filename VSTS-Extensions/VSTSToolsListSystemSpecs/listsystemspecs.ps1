@@ -52,8 +52,8 @@ if ($debugonly -eq "false" -or (($debugonly -eq "true") -and ($env:SYSTEM_DEBUG 
   Write-Output(" ")
   Write-Output("SYSTEM DRIVES")
   Write-Output(" ")
-  Write-Output("DRIVE      VOLUME                      FREE           TOTAL")
-  Write-Output("-----      -------             ------------    ------------")
+  Write-Output("DRIVE      VOLUME                           FREE           TOTAL")
+  Write-Output("-----      -------                  ------------    ------------")
 
   $drives = Get-PSDrive | 
        Where-Object {$_.Provider -Like "*\FileSystem"} |
@@ -61,7 +61,7 @@ if ($debugonly -eq "false" -or (($debugonly -eq "true") -and ($env:SYSTEM_DEBUG 
 
   $drives | ForEach-Object {Write-Output("{0} {1}  {2} GB {3} GB" -f 
       ($_.Name + ":").PadRight(10, " "), 
-       $_.Description.PadRight(15, " "), 
+       $_.Description.PadRight(20, " "), 
       ($_.Free / 1073741824).ToString("###,###,###,##0.0").PadLeft(12, " "), 
       (($_.Free + $_.Used) / 1073741824).ToString("###,###,###,##0.0").PadLeft(12, " "))}
 }
