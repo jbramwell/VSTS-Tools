@@ -55,8 +55,8 @@ There are two parameters that can be set with this task:
 |Release|Description                                |
 |-------|-------------------------------------------|
 | 1.0.0 | Initial release                           |
-|       |   - VSTS-List Files                       |
-|       |   - VSTS-List Variable                    |
+|       | ...VSTS-List Files                        |
+|       | ...VSTS-List Variable                     |
 | 1.1.0 | VSTS-Keep task                            |
 | 1.2.0 | VSTS-List-Apps                            |
 | 1.3.0 | VSTS-List-System-Info                     |

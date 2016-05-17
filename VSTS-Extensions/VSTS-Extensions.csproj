@@ -56,6 +56,7 @@
     <Content Include="screenshots\keep.png" />
     <Content Include="screenshots\ListApps.png" />
     <Content Include="screenshots\ListFiles.png" />
+    <Content Include="screenshots\ListSystemInfo.png" />
     <Content Include="screenshots\ListVariables.png" />
     <Content Include="screenshots\OAuth.png" />
     <Content Include="VSTSToolsListApps\icon.png" />
