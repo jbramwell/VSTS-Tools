@@ -46,7 +46,7 @@
       "path": "VSTSToolsListApps"
     },
     {
-      "path": "VSTSToolsListSystemSpecs"
+      "path": "VSTSToolsListSystemInfo"
     }
   ],
   "scopes": [
@@ -94,13 +94,13 @@
       }
     },
     {
-      "id": "vsts-ListSystemSpecs",
+      "id": "vsts-ListSystemInfo",
       "type": "ms.vss-distributed-task.task",
       "targets": [
         "ms.vss-distributed-task.tasks"
       ],
       "properties": {
-        "name": "VSTSToolsListSystemSpecs"
+        "name": "VSTSToolsListSystemInfo"
       }
     }
   ],

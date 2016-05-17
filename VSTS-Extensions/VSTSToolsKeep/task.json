@@ -17,7 +17,7 @@
     "Patch": "0"
   },
   "minimumAgentVersion": "1.99.0",
-  "instanceNameFormat": "VSTSToolsKeep $(message)",
+  "instanceNameFormat": "VSTS-Tools Keep $(message)",
   "groups": [
     {
       "name": "advanced",

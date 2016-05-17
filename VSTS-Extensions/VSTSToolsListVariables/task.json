@@ -17,7 +17,7 @@
     "Patch": "0"
   },
   "minimumAgentVersion": "1.83.0",
-  "instanceNameFormat": "VSTSToolsListVariables $(message)",
+  "instanceNameFormat": "VSTS-Tools List Variables $(message)",
   "groups": [
     {
       "name": "advanced",

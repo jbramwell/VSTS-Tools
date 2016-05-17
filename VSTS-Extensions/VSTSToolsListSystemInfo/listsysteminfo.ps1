@@ -2,7 +2,7 @@ param (
     [string]$debugonly
 )
 
-Write-Verbose "Entering: listsystemspecs.ps1"
+Write-Verbose "Entering: listsysteminfo.ps1"
 Write-Verbose "  debugonly: $debugonly"
 
 # Import the Task.Common dll that has all the cmdlets we need for Build

@@ -43,15 +43,24 @@ There are two parameters that can be set with this task:
 
 ![VSTS-Tools Keep Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/db6926620a6d8208afeab44eed32dd385299210b/VSTS-Extensions/screenshots/keep.png)
 
+## VSTS-Tools List System Info
+This extension will list out (in the log) various system-related information and settings. This task can be especially useful on hosted build agents where you do not have direct access to the build server.
+
+There are two parameters that can be set with this task:
+
+* Target Branch - specifies the name of the branch that must be built in order for the task to run. For example, if you set the Target Branch to 'master' then the build will be set to **keep forever** only when the master branch is built.
+* Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
+
 ## Release History/Road Map
 |Release|Description                                |
 |-------|-------------------------------------------|
 | 1.0.0 | Initial release                           |
+|       |   - VSTS-List Files                       |
+|       |   - VSTS-List Variable                    |
 | 1.1.0 | VSTS-Keep task                            |
-| 1.2.0 | VSTS-List-Apps (list installed apps)      |
-|       | VSTS-List-System-Specs                    |
+| 1.2.0 | VSTS-List-Apps                            |
+| 1.3.0 | VSTS-List-System-Info                     |
 |       | TBD... (based on requests)                |
-
 
 ## Feedback and Support
 If you like this set of extensions, please leave a review and rating. If you have any suggestions and/or problems, please [file an issue so we can get it resolved](https://github.com/jbramwell/VSTS-Tools/issues).
