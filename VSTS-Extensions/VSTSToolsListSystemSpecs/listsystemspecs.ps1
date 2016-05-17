@@ -13,6 +13,7 @@ if ($debugonly -eq "false" -or (($debugonly -eq "true") -and ($env:SYSTEM_DEBUG 
   $result = gwmi Win32_OperatingSystem 
   $system = get-wmiobject Win32_ComputerSystem
   $timeZoneInfo = [TimeZoneInfo]::Local
+  $OSInfo = Get-WmiObject Win32_OperatingSystem
 
   Write-Output(" ")
   Write-Output("SERVER")
@@ -29,7 +30,10 @@ if ($debugonly -eq "false" -or (($debugonly -eq "true") -and ($env:SYSTEM_DEBUG 
   Write-Output("Operating System:              $($result.Caption)")
   Write-Output("Operating System Version:      $($result.Version)")
   Write-Output("OS Service Pack Version:       {0}.{1}" -f $result.ServicePackMajorVersion, $result.ServicePackMinorVersion)
-  Write-Output("OS Install Date:               {0}" -f ([WMI]'').ConvertToDateTime((Get-WmiObject Win32_OperatingSystem).InstallDate))
+  Write-Output("OS Install Date:               {0}" -f ([WMI]'').ConvertToDateTime($OSInfo.InstallDate))
+  Write-Output("Last Bootup Time:              {0}" -f ([WMI]'').ConvertToDateTime($OSInfo.LastBootUpTime))
+  Write-Output("OS Language:                   $($result.OSLanguage)")
+  Write-Output("Locale:                        $($result.Locale)")
   Write-Output("System Directory:              $($result.SystemDirectory)")
   Write-Output("Windows Directory:             $($result.WindowsDirectory)")
 
@@ -64,4 +68,6 @@ if ($debugonly -eq "false" -or (($debugonly -eq "true") -and ($env:SYSTEM_DEBUG 
        $_.Description.PadRight(20, " "), 
       ($_.Free / 1073741824).ToString("###,###,###,##0.0").PadLeft(12, " "), 
       (($_.Free + $_.Used) / 1073741824).ToString("###,###,###,##0.0").PadLeft(12, " "))}
+
+  Get-CimInstance -ClassName win32_operatingsystem | select csname, lastbootuptime
 }
