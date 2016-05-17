@@ -8,7 +8,7 @@ There is one parameter that can be set with this task:
 
 * Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
 
-![VSTS-Tools List Apps Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/db6926620a6d8208afeab44eed32dd385299210b/VSTS-Extensions/screenshots/ListApps.png)
+![VSTS-Tools List Apps Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/screenshots/ListApps.png)
 
 ## VSTS-Tools List Files
 This extension will list out (in the log) all files beneath the folder specified as the *Root Folder*. This task can be especially useful on hosted build agents where you do not have direct access to the file system.
@@ -18,7 +18,17 @@ There are two parameters that can be set with this task:
 * Root Directory - all files and folders beneath the root directory will be listed (recursively).
 * Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
 
-![VSTS-Tools List Files Image](https://github.com/jbramwell/VSTS-Tools/blob/db6926620a6d8208afeab44eed32dd385299210b/VSTS-Extensions/screenshots/ListFiles.png?raw=true)
+![VSTS-Tools List Files Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/screenshots/ListFiles.png)
+
+## VSTS-Tools List System Info
+This extension will list out (in the log) various system-related information and settings. This task can be especially useful on hosted build agents where you do not have direct access to the build server.
+
+There are two parameters that can be set with this task:
+
+* Target Branch - specifies the name of the branch that must be built in order for the task to run. For example, if you set the Target Branch to 'master' then the build will be set to **keep forever** only when the master branch is built.
+* Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
+
+![VSTS-Tools List System Info Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/screenshots/ListSystemInfo.png)
 
 ## VSTS-Tools List Variables
 This extension will list out (in the log) all variables that are defined at the time this extension is executed. This task can be especially useful on hosted build agents where you do not have direct access to the file system.
@@ -27,7 +37,7 @@ There is one parameter that can be set with this task:
 
 * Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
 
-![VSTS-Tools List Variables Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/db6926620a6d8208afeab44eed32dd385299210b/VSTS-Extensions/screenshots/ListVariables.png)
+![VSTS-Tools List Variables Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/screenshots/ListVariables.png)
 
 ## VSTS-Tools Keep
 This extension allows you to set the retention for a build to *Keep Forever*. This is especially handy if you are making use of a 3rd party release tool (e.g. Octopus Deploy) or a custom release process and you want to set the retention after completing the deployment-related build tasks.
@@ -42,14 +52,6 @@ There are two parameters that can be set with this task:
 ![VSTS-Tools Keep Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/OAuth.png?raw=true)
 
 ![VSTS-Tools Keep Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/db6926620a6d8208afeab44eed32dd385299210b/VSTS-Extensions/screenshots/keep.png)
-
-## VSTS-Tools List System Info
-This extension will list out (in the log) various system-related information and settings. This task can be especially useful on hosted build agents where you do not have direct access to the build server.
-
-There are two parameters that can be set with this task:
-
-* Target Branch - specifies the name of the branch that must be built in order for the task to run. For example, if you set the Target Branch to 'master' then the build will be set to **keep forever** only when the master branch is built.
-* Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
 
 ## Release History/Road Map
 |Release|Description                                |
