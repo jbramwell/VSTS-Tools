@@ -48,6 +48,8 @@
     <None Include="VSTSToolsListSystemInfo\task.json" />
     <None Include="VSTSToolsListVariables\listvariables.ps1" />
     <None Include="VSTSToolsListVariables\task.json" />
+    <None Include="VSTSToolsStopBuild\stopbuild.ps1" />
+    <None Include="VSTSToolsStopBuild\task.json" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -69,6 +71,8 @@
     <Content Include="VSTSToolsListSystemInfo\listsysteminfo.js" />
     <Content Include="VSTSToolsListVariables\icon.png" />
     <Content Include="VSTSToolsListVariables\listvariables.js" />
+    <Content Include="VSTSToolsStopBuild\icon.png" />
+    <Content Include="VSTSToolsStopBuild\stopbuild.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

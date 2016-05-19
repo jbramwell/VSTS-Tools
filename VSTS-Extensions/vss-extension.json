@@ -2,8 +2,8 @@
   "manifestVersion": 1,
   "id": "vsts-tools-build-extensions",
   "name": "VSTS-Tools Build Extensions",
-  "version": "1.3.0",
-  "public": true,
+  "version": "1.4.0",
+  "public": false,
   "publisher": "moonspace-labs-llc",
   "targets": [
     {
@@ -47,6 +47,9 @@
     },
     {
       "path": "VSTSToolsListSystemInfo"
+    },
+    {
+      "path": "VSTSToolsStopBuild"
     }
   ],
   "scopes": [
@@ -101,6 +104,16 @@
       ],
       "properties": {
         "name": "VSTSToolsListSystemInfo"
+      }
+    },
+    {
+      "id": "vsts-StopBuild",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "VSTSToolsStopBuild"
       }
     }
   ],

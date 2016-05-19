@@ -1,0 +1,76 @@
+{
+  "id": "6a1c6d70-04d2-11e6-87b2-99539d5be29e",
+  "name": "VSTSToolsStopBuild",
+  "friendlyName": "VSTS-Tools Stop Build",
+  "description": "Conditionally stops a build based on selected input values and a comparison operator.",
+  "author": "Moonspace Labs, LLC",
+  "helpMarkDown": "Conditionally stops a build based on selected input values and a comparison operator.",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [ ],
+  "version": {
+    "Major": "1",
+    "Minor": "0",
+    "Patch": "0"
+  },
+  "minimumAgentVersion": "1.83.0",
+  "instanceNameFormat": "VSTS-Tools Stop Build $(message)",
+  "groups": [
+    {
+      "name": "advanced",
+      "displayName": "Advanced",
+      "isExpanded": true
+    }
+  ],
+  "inputs": [
+    {
+      "name": "leftOperand",
+      "type": "string",
+      "label": "Left Item to Compare",
+      "required": true,
+      "helpMarkDown": "Specifies the item to be compared aginst the 'Right Item' based on the selected operand."
+    },
+    {
+      "name": "operator",
+      "type": "pickList",
+      "label": "Operator",
+      "defaultValue": "-eq",
+      "required": true,
+      "options": {
+        "-eq": "Equal",
+        "-ne": "Not Equal",
+        "-lt": "Less Than",
+        "-le": "Less Than or Equal",
+        "-gt": "Great Than",
+        "-ge": "Greater Than or Equal",
+        "-Like": "Like",
+        "-NotLike": "Not Like",
+        "-Match": "Match",
+        "-NotMatch": "Not Match",
+        "-Contains": "Contains",
+        "-NotContains": "Not Contains",
+        "-In": "In",
+        "-NotIt": "Not In"
+      },
+      "helpMarkDown": "Select the desired comparison operator."
+    },
+    {
+      "name": "rightOperand",
+      "type": "string",
+      "label": "Right Item to Compare",
+      "required": true,
+      "helpMarkDown": "Specifies the item to be compared aginst the 'Left Item' based on the selected operand."
+    }
+
+  ],
+  "execution": {
+    "PowerShell": {
+      "target": "$(currentDirectory)\\stopbuild.ps1",
+      "argumentFormat": "",
+      "workingDirectory": "$(currentDirectory)"
+    }
+  }
+}
