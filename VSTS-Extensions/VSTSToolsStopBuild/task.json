@@ -31,7 +31,7 @@
       "type": "string",
       "label": "Left Item to Compare",
       "required": true,
-      "helpMarkDown": "Specifies the item to be compared aginst the 'Right Item' based on the selected operand."
+      "helpMarkDown": "Specifies the item to be compared aginst the 'Right Item' based on the selected operand. For example, to compare current branch name, use $(Build.SourceBranchName)."
     },
     {
       "name": "operator",

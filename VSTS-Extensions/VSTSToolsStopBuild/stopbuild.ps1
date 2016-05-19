@@ -38,6 +38,6 @@ switch($operator)
 
 if ($answer -eq $true)
 {
-    Write-Output("##vso[task.logissue type=warning;]Cancelling build based on currently selected criteria.")
+    Write-Output("##vso[task.logissue type=warning;]Cancelling build based on currently selected criteria => $leftOperand $operator $rightOperand")
     Write-Output("##vso[task.complete result=Cancelled;]")
 }
