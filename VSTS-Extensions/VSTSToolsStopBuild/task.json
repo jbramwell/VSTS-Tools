@@ -1,5 +1,5 @@
 {
-  "id": "6a1c6d70-04d2-11e6-87b2-99539d5be29e",
+  "id": "e8ac720a-7fe0-43d7-867a-af521ef7e639",
   "name": "VSTSToolsStopBuild",
   "friendlyName": "VSTS-Tools Stop Build",
   "description": "Conditionally stops a build based on selected input values and a comparison operator.",
@@ -16,7 +16,7 @@
     "Minor": "0",
     "Patch": "0"
   },
-  "minimumAgentVersion": "1.83.0",
+  "minimumAgentVersion": "1.89.0",
   "instanceNameFormat": "VSTS-Tools Stop Build $(message)",
   "groups": [
     {
