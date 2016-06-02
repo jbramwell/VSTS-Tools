@@ -1,10 +1,10 @@
 ## VSTS-Tools
 This extension provides several build tasks that can help you diagnose your builds as well as control the retention of completed builds. The tasks are also useful for keeping a running history of environment variables, files and installed apps on your build agents.
 
-***NOTE:** At this time, not all of the build tasks below will install with TFS 2015. I am not sure why at the moment but I am working to get this resolved. The goal is for the build tasks below to support both VSTS and TFS. Once I am able to achieve this, I'll remove this note. In the meantime, each task is tagged with the platforms that it supports directly underneath the task header. -- Thanks!*
+*NOTE: At this time, not all of the build tasks below will install with TFS 2015. I am not sure why at the moment but I am working to get this resolved. The goal is for the build tasks below to support both VSTS and TFS. Once I am able to achieve this, I'll remove this note. In the meantime, each task is tagged with the platforms that it supports directly underneath the task header. -- Thanks!*
 
 ## VSTS-Tools Keep
-![Works with VSTS](./images/VSTS_light.png)
+![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png)
 
 This extension allows you to set the retention for a build to *Keep Forever*. This is especially handy if you are making use of a 3rd party release tool (e.g. Octopus Deploy) or a custom release process and you want to set the retention after completing the deployment-related build tasks.
 
@@ -20,7 +20,7 @@ There are two parameters that can be set with this task:
 ![VSTS-Tools Keep Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/screenshots/keep.png)
 
 ## VSTS-Tools List Apps
-![Works with VSTS](./images/VSTS_light.png)
+![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png)
 
 This extension provides you with a list of all applications installed on the build agent at the time the build is executed. This task is especially useful on hosted build agents where you do not have direct access to the file system.
 
@@ -31,8 +31,8 @@ There is one parameter that can be set with this task:
 ![VSTS-Tools List Apps Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/screenshots/ListApps.png)
 
 ## VSTS-Tools List Files
-![Works with VSTS](./images/VSTS_light.png)
-![Works with TFS 2015](./images/TFS_2015_light.png)
+![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png)
+![Works with TFS 2015](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/TFS_2015_light.png)
 
 This extension will list out (in the log) all files beneath the folder specified as the *Root Folder*. This task can be especially useful on hosted build agents where you do not have direct access to the file system.
 
@@ -44,7 +44,7 @@ There are two parameters that can be set with this task:
 ![VSTS-Tools List Files Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/screenshots/ListFiles.png)
 
 ## VSTS-Tools List System Info
-![Works with VSTS](./images/VSTS_light.png)
+![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png)
 
 This extension will list out (in the log) various system-related information and settings. This task can be especially useful on hosted build agents where you do not have direct access to the build server.
 
@@ -56,8 +56,8 @@ There are two parameters that can be set with this task:
 ![VSTS-Tools List System Info Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/screenshots/ListSystemInfo.png)
 
 ## VSTS-Tools List Variables
-![Works with VSTS](./images/VSTS_light.png)
-![Works with TFS 2015](./images/TFS_2015_light.png)
+![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png)
+![Works with TFS 2015](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/TFS_2015_light.png)
 
 This extension will list out (in the log) all variables that are defined at the time this extension is executed. This task can be especially useful on hosted build agents where you do not have direct access to the file system.
 
