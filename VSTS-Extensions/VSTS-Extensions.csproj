@@ -54,6 +54,9 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="extension-icon.png" />
+    <Content Include="images\TFS_2015_light.png" />
+    <Content Include="images\TFS_2015_QU2.1_light.png" />
+    <Content Include="images\VSTS_light.png" />
     <Content Include="screenshots\extensions.png" />
     <Content Include="screenshots\keep.png" />
     <Content Include="screenshots\ListApps.png" />
