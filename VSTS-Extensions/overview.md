@@ -1,7 +1,7 @@
 ## VSTS-Tools
 This extension provides several build tasks that can help you diagnose your builds as well as control the retention of completed builds. The tasks are also useful for keeping a running history of environment variables, files and installed apps on your build agents.
 
-*NOTE: At this time, not all of the build tasks below will install with TFS 2015. I am not sure why at the moment but I am working to get this resolved. The goal is for the build tasks below to support both VSTS and TFS. Once I am able to achieve this, I'll remove this note. In the meantime, each task is tagged with the platforms that it supports directly underneath the task header. -- Thanks!*
+>**NOTE**: At this time, not all of the build tasks below will install with TFS 2015. I am not sure why at the moment but I am working to get this resolved. The goal is for the build tasks below to support both VSTS and TFS. Once I am able to achieve this, I'll remove this note. In the meantime, each task is tagged with the platforms that it supports directly underneath the task header. -- Thanks!
 
 ## VSTS-Tools Keep
 ![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png)
