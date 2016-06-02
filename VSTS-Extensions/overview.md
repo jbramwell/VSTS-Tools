@@ -31,8 +31,7 @@ There is one parameter that can be set with this task:
 ![VSTS-Tools List Apps Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/screenshots/ListApps.png)
 
 ## VSTS-Tools List Files
-![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png)
-![Works with TFS 2015](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/TFS_2015_light.png)
+![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png) ![Works with TFS 2015](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/TFS_2015_light.png)
 
 This extension will list out (in the log) all files beneath the folder specified as the *Root Folder*. This task can be especially useful on hosted build agents where you do not have direct access to the file system.
 
@@ -56,8 +55,7 @@ There are two parameters that can be set with this task:
 ![VSTS-Tools List System Info Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/screenshots/ListSystemInfo.png)
 
 ## VSTS-Tools List Variables
-![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png)
-![Works with TFS 2015](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/TFS_2015_light.png)
+![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png) ![Works with TFS 2015](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/TFS_2015_light.png)
 
 This extension will list out (in the log) all variables that are defined at the time this extension is executed. This task can be especially useful on hosted build agents where you do not have direct access to the file system.
 
