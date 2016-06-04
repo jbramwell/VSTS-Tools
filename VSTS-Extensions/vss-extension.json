@@ -40,13 +40,13 @@
       "path": "VSTSToolsListVariables"
     },
     {
-      "path": "VSTSToolsKeep"
-    },
-    {
       "path": "VSTSToolsListApps"
     },
     {
       "path": "VSTSToolsListSystemInfo"
+    },
+    {
+      "path": "VSTSToolsKeep"
     }
   ],
   "scopes": [
@@ -74,16 +74,6 @@
       }
     },
     {
-      "id": "vsts-Keep",
-      "type": "ms.vss-distributed-task.task",
-      "targets": [
-        "ms.vss-distributed-task.tasks"
-      ],
-      "properties": {
-        "name": "VSTSToolsKeep"
-      }
-    },
-    {
       "id": "vsts-ListApps",
       "type": "ms.vss-distributed-task.task",
       "targets": [
@@ -101,6 +91,16 @@
       ],
       "properties": {
         "name": "VSTSToolsListSystemInfo"
+      }
+    },
+    {
+      "id": "vsts-Keep",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "VSTSToolsKeep"
       }
     }
   ],

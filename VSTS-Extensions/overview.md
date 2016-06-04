@@ -13,14 +13,14 @@ There are two parameters that can be set with this task:
 * Target Branch - specifies the name of the branch that must be built in order for the task to run. For example, if you set the Target Branch to 'master' then the build will be set to **keep forever** only when the master branch is built.
 * Execute on Debug Only - if checked, the task will execute only if **system.debug** is set to **true**.
 
-**IMPORTANT:** Before you can make use of the *VSTS-Tools Keep* task, you must first configure your account to allow the use of the build process OAuth token. To do this, go to the **Options** tab of the build definition and select **Allow Scripts to Access OAuth Token**.
+>**IMPORTANT:** Before you can make use of the *VSTS-Tools Keep* task, you must first configure your account to allow the use of the build process OAuth token. To do this, go to the **Options** tab of the build definition and select **Allow Scripts to Access OAuth Token**.
 
 ![VSTS-Tools Keep Image](https://github.com/jbramwell/VSTS-Tools/blob/master/VSTS-Extensions/screenshots/OAuth.png?raw=true)
 
 ![VSTS-Tools Keep Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/screenshots/keep.png)
 
 ## VSTS-Tools List Apps
-![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png)
+![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png) ![Works with TFS 2015](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/TFS_2015_light.png)
 
 This extension provides you with a list of all applications installed on the build agent at the time the build is executed. This task is especially useful on hosted build agents where you do not have direct access to the file system.
 
@@ -43,7 +43,7 @@ There are two parameters that can be set with this task:
 ![VSTS-Tools List Files Image](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/screenshots/ListFiles.png)
 
 ## VSTS-Tools List System Info
-![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png)
+![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png) ![Works with TFS 2015](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/TFS_2015_light.png)
 
 This extension will list out (in the log) various system-related information and settings. This task can be especially useful on hosted build agents where you do not have direct access to the build server.
 
@@ -74,6 +74,7 @@ There is one parameter that can be set with this task:
 | 1.1.0 | VSTS-Keep task                            |
 | 1.2.0 | VSTS-List-Apps                            |
 | 1.3.0 | VSTS-List-System-Info                     |
+| 1.3.1 | Resolved issues so tasks install on TFS   |
 |       | TBD... (based on requests)                |
 
 ## Feedback and Support
