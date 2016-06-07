@@ -1,10 +1,10 @@
 ## VSTS-Tools
 This extension provides several build tasks that can help you diagnose your builds as well as control the retention of completed builds. The tasks are also useful for keeping a running history of environment variables, files and installed apps on your build agents.
 
->**NOTE**: At this time, not all of the build tasks below will install with TFS 2015. I am not sure why at the moment but I am working to get this resolved. The goal is for the build tasks below to support both VSTS and TFS. Once I am able to achieve this, I'll remove this note. In the meantime, each task is tagged with the platforms that it supports directly underneath the task header. -- Thanks!
-
 ## VSTS-Tools Keep
 ![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png)
+
+>**NOTE**: This task does not yet work with Team Foundation Server 2015 (on-premises). Once TFS has been updated to support this task, the task will be enabled for use on TFS.
 
 This extension allows you to set the retention for a build to *Keep Forever*. This is especially handy if you are making use of a 3rd party release tool (e.g. Octopus Deploy) or a custom release process and you want to set the retention after completing the deployment-related build tasks.
 
