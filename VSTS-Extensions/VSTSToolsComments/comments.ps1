@@ -1,6 +1,6 @@
 param (
     [string]$comments,
-    [bool]$includeCommentsInLog
+    [string]$includeCommentsInLog
 )
 
 Write-Verbose "Entering: comments.ps1"
