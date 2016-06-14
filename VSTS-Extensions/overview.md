@@ -11,6 +11,7 @@ There are two parameters that can be set with this task:
 * Comments - the text of the build comments.
 * Include Comments in Log - If checked, the comments will be included in the log file; Otherwise, you will only see the comments in the build definition.
 
+![VSTS-Tools Comments](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/screenshots/Comments.png)
 
 ## VSTS-Tools Keep
 ![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png)
