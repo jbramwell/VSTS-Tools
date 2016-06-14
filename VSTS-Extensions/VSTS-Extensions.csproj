@@ -38,6 +38,8 @@
   <ItemGroup>
     <None Include="overview.md" />
     <None Include="vss-extension.json" />
+    <None Include="VSTSToolsComments\comments.ps1" />
+    <None Include="VSTSToolsComments\task.json" />
     <None Include="VSTSToolsListApps\listapps.ps1" />
     <None Include="VSTSToolsListApps\task.json" />
     <None Include="VSTSToolsKeep\keepbuild.ps1" />
@@ -64,6 +66,8 @@
     <Content Include="screenshots\ListSystemInfo.png" />
     <Content Include="screenshots\ListVariables.png" />
     <Content Include="screenshots\OAuth.png" />
+    <Content Include="VSTSToolsComments\icon.png" />
+    <Content Include="VSTSToolsComments\comments.js" />
     <Content Include="VSTSToolsListApps\icon.png" />
     <Content Include="VSTSToolsListApps\listapps.js" />
     <Content Include="VSTSToolsKeep\icon.png" />

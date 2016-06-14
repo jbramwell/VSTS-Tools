@@ -1,0 +1,46 @@
+{
+  "id": "b7398770-5e17-4b5d-97fb-f2aec493c35b",
+  "name": "VSTSToolsComments",
+  "friendlyName": "VSTS-Tools Comments",
+  "description": "Lets you save a few comments about the build - e.g. why it's setup the way it is, things you should know before running the build, etc.",
+  "author": "Moonspace Labs, LLC",
+  "helpMarkDown": "Lets you save a few comments about the build - e.g. why it's setup the way it is, things you should know before running the build, etc.",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [ "DotNetFramework" ],
+  "version": {
+    "Major": "1",
+    "Minor": "0",
+    "Patch": "0"
+  },
+  "minimumAgentVersion": "1.89.0",
+  "instanceNameFormat": "VSTS-Tools Comments $(message)",
+  "inputs": [
+    {
+      "name": "comments",
+      "type": "multiLine",
+      "label": "Comments",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "Provide a few comments about the build - e.g. why it's setup the way it is, things you should know before running the build, etc."
+    },
+    {
+      "name": "includeCommentsInLog",
+      "type": "boolean",
+      "label": "Include Comments in Log",
+      "defaultValue": false,
+      "required": false,
+      "helpMarkDown": "If checked, the comments will be included in the log file."
+    }
+  ],
+  "execution": {
+    "PowerShell": {
+      "target": "$(currentDirectory)\\comments.ps1",
+      "argumentFormat": "",
+      "workingDirectory": "$(currentDirectory)"
+    }
+  }
+}

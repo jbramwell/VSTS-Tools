@@ -1,6 +1,17 @@
 ## VSTS-Tools
 This extension provides several build tasks that can help you diagnose your builds as well as control the retention of completed builds. The tasks are also useful for keeping a running history of environment variables, files and installed apps on your build agents.
 
+## VSTS-Tools Comments
+![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png) ![Works with TFS 2015](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/TFS_2015_light.png)
+
+This extension allows you to provide some comments about the build definition. For example, you might include information about the order of build tasks and why they are ordered the way they are. You might provide information about the source of some of the variable values. You can include information about any constraints (e.g. time windows) as to when the build can run, etc. Essentially, you can provide whatever comments you want :-)
+
+There are two parameters that can be set with this task:
+
+* Comments - the text of the build comments.
+* Include Comments in Log - If checked, the comments will be included in the log file; Otherwise, you will only see the comments in the build definition.
+
+
 ## VSTS-Tools Keep
 ![Works with VSTS](https://raw.githubusercontent.com/jbramwell/VSTS-Tools/master/VSTS-Extensions/images/VSTS_light.png)
 
@@ -75,6 +86,7 @@ There is one parameter that can be set with this task:
 | 1.2.0 | VSTS-List-Apps                            |
 | 1.3.0 | VSTS-List-System-Info                     |
 | 1.3.1 | Resolved issues so tasks install on TFS   |
+| 1.4.0 | VSTS-Comments task                        |
 |       | TBD... (based on requests)                |
 
 ## Feedback and Support

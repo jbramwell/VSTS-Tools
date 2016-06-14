@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "vsts-tools-build-extensions",
   "name": "VSTS-Tools Build Extensions",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "public": true,
   "publisher": "moonspace-labs-llc",
   "targets": [
@@ -17,7 +17,8 @@
   "tags": [
     "diagnostics",
     "list files",
-    "list folders"
+    "list folders",
+    "build comments"
   ],
   "screenshots": [
     {
@@ -33,6 +34,9 @@
     "default": "extension-icon.png"
   },
   "files": [
+    {
+      "path": "VSTSToolsComments"
+    },
     {
       "path": "VSTSToolsListFiles"
     },
@@ -53,6 +57,16 @@
     "vso.build_execute"
   ],
   "contributions": [
+    {
+      "id": "vsts-comments",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "VSTSToolsComments"
+      }
+    },
     {
       "id": "vsts-ListFiles",
       "type": "ms.vss-distributed-task.task",
