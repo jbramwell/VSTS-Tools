@@ -25,7 +25,11 @@
       "label": "Comments",
       "defaultValue": "",
       "required": false,
-      "helpMarkDown": "Provide a few comments about the build - e.g. why it's setup the way it is, things you should know before running the build, etc."
+      "helpMarkDown": "Provide a few comments about the build - e.g. why it's setup the way it is, things you should know before running the build, etc.",
+      "properties": {
+        "resizable": true,
+        "rows": "5"
+      }
     },
     {
       "name": "includeCommentsInLog",
