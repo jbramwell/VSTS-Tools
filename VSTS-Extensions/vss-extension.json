@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "vsts-tools-build-extensions",
   "name": "VSTS-Tools Build Extensions",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "public": true,
   "publisher": "moonspace-labs-llc",
   "targets": [

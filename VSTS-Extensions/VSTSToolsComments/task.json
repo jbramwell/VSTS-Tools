@@ -14,7 +14,7 @@
   "version": {
     "Major": "1",
     "Minor": "0",
-    "Patch": "0"
+    "Patch": "1"
   },
   "minimumAgentVersion": "1.89.0",
   "instanceNameFormat": "VSTS-Tools Comments $(message)",
@@ -25,7 +25,11 @@
       "label": "Comments",
       "defaultValue": "",
       "required": false,
-      "helpMarkDown": "Provide a few comments about the build - e.g. why it's setup the way it is, things you should know before running the build, etc."
+      "helpMarkDown": "Provide a few comments about the build - e.g. why it's setup the way it is, things you should know before running the build, etc.",
+      "properties": {
+        "resizable": true,
+        "rows": "5"
+      }
     },
     {
       "name": "includeCommentsInLog",

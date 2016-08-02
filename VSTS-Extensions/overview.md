@@ -88,7 +88,7 @@ There is one parameter that can be set with this task:
 | 1.3.0 | VSTS-List-System-Info                     |
 | 1.3.1 | Resolved issues so tasks install on TFS   |
 | 1.4.0 | VSTS-Comments task                        |
-|       | TBD... (based on requests)                |
+| 1.4.1 | VSTS-Comments - increased textbox size    |
 
 ## Feedback and Support
 If you like this set of extensions, please leave a review and rating. If you have any suggestions and/or problems, please [file an issue so we can get it resolved](https://github.com/jbramwell/VSTS-Tools/issues).
