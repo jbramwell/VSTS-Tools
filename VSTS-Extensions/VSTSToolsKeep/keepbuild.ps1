@@ -14,7 +14,7 @@ if ($debugonly -eq "false" -or (($debugonly -eq "true") -and ($env:SYSTEM_DEBUG 
 {
     if ($env:BUILD_SOURCEBRANCHNAME -eq $targetbranch)
     {
-        $uri = "$($env:SYSTEM_TEAMFOUNDATIONSERVERURI)$env:SYSTEM_TEAMPROJECT/_apis/build/builds/$($env:BUILD_BUILDID)?api-version=2.0"
+        $uri = "$($env:SYSTEM_TEAMFOUNDATIONCOLLECTIONURI)$env:SYSTEM_TEAMPROJECT/_apis/build/builds/$($env:BUILD_BUILDID)?api-version=2.0"
         Write-Verbose "URI: $uri"
         
         $body = "{keepForever:true}"
