@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VSTSKeep</RootNamespace>
     <AssemblyName>VSTS-Keep</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,20 +34,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommandLineArgumentsParser, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommandLineArgumentsParser.3.0.0.1\lib\net452\CommandLineArgumentsParser.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="CommandLineArgumentsParser, Version=3.0.18.0, Culture=neutral, PublicKeyToken=16ad7bf6f4a1666c, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommandLineArgumentsParser.3.0.18\lib\net45\CommandLineArgumentsParser.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="ReflectionBridge, Version=0.0.8.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ReflectionBridge.0.0.8\lib\net452\ReflectionBridge.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="ReflectionBridge, Version=0.0.13.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReflectionBridge.0.0.13\lib\net452\ReflectionBridge.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,22 +61,22 @@
       <Link>Shared\BaseClasses\AuthenticationBase.cs</Link>
     </Compile>
     <Compile Include="..\vsts-shared\baseclasses\CommandLineArgsBase.cs">
-      <Link>BaseClasses\CommandLineArgsBase.cs</Link>
+      <Link>Shared\BaseClasses\CommandLineArgsBase.cs</Link>
     </Compile>
     <Compile Include="..\VSTS-Shared\Entities\Build.cs">
-      <Link>Entities\Build.cs</Link>
+      <Link>Shared\Entities2\Build.cs</Link>
     </Compile>
     <Compile Include="..\VSTS-Shared\Entities\CollectionResult.cs">
-      <Link>Entities\CollectionResult.cs</Link>
+      <Link>Shared\Entities2\CollectionResult.cs</Link>
     </Compile>
     <Compile Include="..\VSTS-Shared\Entities\Item.cs">
-      <Link>Entities\Item.cs</Link>
+      <Link>Shared\Entities2\Item.cs</Link>
     </Compile>
     <Compile Include="..\VSTS-Shared\Helpers\RestHttpClient.cs">
       <Link>Shared\Helpers\RestHttpClient.cs</Link>
     </Compile>
     <Compile Include="..\VSTS-Shared\Helpers\VSTSHelper.cs">
-      <Link>Helpers\VSTSHelper.cs</Link>
+      <Link>Shared\Helpers\VSTSHelper.cs</Link>
     </Compile>
     <Compile Include="..\VSTS-Shared\Interfaces\IRestHttpClient.cs">
       <Link>Shared\Interfaces\IRestHttpClient.cs</Link>

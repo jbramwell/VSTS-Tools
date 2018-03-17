@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25115.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSTS-Get", "VSTS-Get\VSTS-Get.csproj", "{E59F075F-6C5E-4E17-BB45-FCE53A2F7923}"
 EndProject
@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSTS-Extensions", "VSTS-Extensions\VSTS-Extensions.csproj", "{45A2FB3C-4A7C-4125-8F37-662322375E95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSTS-Users", "VSTS-Users\VSTS-Users.csproj", "{A044D4FF-1F07-4619-BD65-81FFB0CF8204}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,8 +40,15 @@ Global
 		{45A2FB3C-4A7C-4125-8F37-662322375E95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45A2FB3C-4A7C-4125-8F37-662322375E95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45A2FB3C-4A7C-4125-8F37-662322375E95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A044D4FF-1F07-4619-BD65-81FFB0CF8204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A044D4FF-1F07-4619-BD65-81FFB0CF8204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A044D4FF-1F07-4619-BD65-81FFB0CF8204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A044D4FF-1F07-4619-BD65-81FFB0CF8204}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C99D80D-B058-4923-9414-8D1517122935}
 	EndGlobalSection
 EndGlobal
