@@ -72,6 +72,9 @@
     <Compile Include="..\VSTS-Shared\Entities\Item.cs">
       <Link>Shared\Entities2\Item.cs</Link>
     </Compile>
+    <Compile Include="..\VSTS-Shared\Entities\Users.cs">
+      <Link>Shared\Entities2\Users.cs</Link>
+    </Compile>
     <Compile Include="..\VSTS-Shared\Helpers\RestHttpClient.cs">
       <Link>Shared\Helpers\RestHttpClient.cs</Link>
     </Compile>

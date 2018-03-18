@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.IO.Compression;
+using System.Linq;
 using System.Net;
 using System.Text;
 using VSTSShared.BaseClasses;
@@ -26,7 +27,6 @@ namespace VSTSShared.Helpers
             string destination, bool verbose = true, int baseIndent = 0)
         {
             var callSucceeded = false;
-            var indent = 0;
             var restHttpClient = new RestHttpClient();
             var url = $"{authentication.AccountUrl}/{project}/_apis/git/repositories/{repo}/items?api-version=1.0&scopePath={fileToDownload}";
 
@@ -45,7 +45,7 @@ namespace VSTSShared.Helpers
                             if (verbose)
                             {
                                 // Count folder levels for indentation purposes
-                                indent = (CountCharacters(destination, '\\') - baseIndent) * 2;
+                                var indent = (CountCharacters(destination, '\\') - baseIndent) * 2;
                                 Console.WriteLine(new string(' ', indent) + fileName);
                             }
 
@@ -72,7 +72,6 @@ namespace VSTSShared.Helpers
             string destination, bool verbose = true)
         {
             var callSucceeded = false;
-            var indent = 0;
             var restHttpClient = new RestHttpClient();
             var url = $"{authentication.AccountUrl}/{project}/_apis/git/repositories/{repo}/items?api-version=1.0&scopePath={folderPath}&recursionLevel=Full";
             var baseIndent = CountCharacters(destination, '\\');
@@ -100,14 +99,14 @@ namespace VSTSShared.Helpers
 
                                 if (verbose)
                                 {
-                                    indent = (CountCharacters(newFolder, '\\') - baseIndent) * 2;
+                                    var indent = (CountCharacters(newFolder, '\\') - baseIndent) * 2;
                                     Console.WriteLine(new string(' ', indent) + newFolder);
                                 }
                             }
                             else
                             {
                                 // Download file
-                                var newPath = Path.Combine(destination, Path.GetDirectoryName(item.Path.TrimStart('/')));
+                                var newPath = Path.Combine(destination, Path.GetDirectoryName(item.Path.TrimStart('/')) ?? item.Path);
 
                                 DownloadFile(authentication, project, repo, item.Path, newPath, verbose, baseIndent - 1);
                             }
@@ -121,7 +120,7 @@ namespace VSTSShared.Helpers
 
         public bool KeepForever(BasicAuthentication authentication, string project, string buildNumber, bool keepForever, bool verbose = true)
         {
-            var callSucceeded = false;
+            bool callSucceeded;
 
             try
             {
@@ -132,7 +131,7 @@ namespace VSTSShared.Helpers
                 var results = restHttpClient.GetAsync<CollectionResult<BuildResult>>(authentication, url);
 
                 // Return false if no match was found
-                callSucceeded = (results != null && results.Result != null && results.Result.Count > 0);
+                callSucceeded = results.Result != null && results.Result.Count > 0;
 
                 if (callSucceeded)
                 {
@@ -163,22 +162,42 @@ namespace VSTSShared.Helpers
             return callSucceeded;
         }
 
+        public CollectionResult<VstsUser> GetVstsUsers(BasicAuthentication authentication)
+        {
+            CollectionResult<VstsUser> users = null;
+
+            try
+            {
+                var restHttpClient = new RestHttpClient();
+                var url =
+                    $"https://{authentication.Account}.vsaex.visualstudio.com/_apis/userentitlements?api-version=4.1-preview&top=1000";
+
+                // Call the Build API to obtain details for the specified build number
+                var results = restHttpClient.GetAsync<CollectionResult<VstsUser>>(authentication, url);
+
+                // Return false if no match was found
+                if (results.Result != null && results.Result.Count > 0)
+                {
+                    users = results.Result;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return users;
+        }
+
         /// <summary>
         /// Counts the occurrences of the specified character within a string.
         /// </summary>
         /// <param name="text">The text to search.</param>
         /// <param name="charToCount">The character to be counted.</param>
         /// <returns>The number of occurrences of the specified character.</returns>
-        private int CountCharacters(string text, char charToCount)
+        private static int CountCharacters(string text, char charToCount)
         {
-            var count = 0;
-
-            for (int index = 0; index < text.Length; index++)
-            {
-                if (text[index].Equals(charToCount)) count++;
-            }
-
-            return count;
+            return text.Count(textChar => textChar.Equals(charToCount));
         }
 
         /// <summary>
@@ -233,12 +252,11 @@ namespace VSTSShared.Helpers
                         streamToRead = new DeflateStream(streamToRead, CompressionMode.Decompress);
                     }
 
-                    using (var streamReader = new StreamReader(streamToRead, Encoding.UTF8))
-                    {
-                        responseText = streamReader.ReadToEnd();
+                    var streamReader = new StreamReader(streamToRead, Encoding.UTF8);
 
-                        streamToRead.Close();
-                    }
+                    responseText = streamReader.ReadToEnd();
+
+                    streamToRead.Close();
                 }
             }
 

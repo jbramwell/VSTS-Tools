@@ -4,10 +4,10 @@
     {
         public long Count { get; set; }
 
-        public Value[] Value { get; set; }
+        public VstsUser[] VstsUser { get; set; }
     }
 
-    public class Value
+    public class VstsUser
     {
         public string Id { get; set; }
 

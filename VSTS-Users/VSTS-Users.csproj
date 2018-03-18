@@ -61,6 +61,12 @@
     <Compile Include="..\VSTS-Shared\BaseClasses\CommandLineArgsBase.cs">
       <Link>Shared\BaseClasses\CommandLineArgsBase.cs</Link>
     </Compile>
+    <Compile Include="..\VSTS-Shared\Entities\Build.cs">
+      <Link>Shared\Entities\Build.cs</Link>
+    </Compile>
+    <Compile Include="..\VSTS-Shared\Entities\CollectionResult.cs">
+      <Link>Shared\Entities\CollectionResult.cs</Link>
+    </Compile>
     <Compile Include="..\VSTS-Shared\Entities\Item.cs">
       <Link>Shared\Entities\Item.cs</Link>
     </Compile>
@@ -69,6 +75,9 @@
     </Compile>
     <Compile Include="..\VSTS-Shared\Helpers\RestHttpClient.cs">
       <Link>Helpers\RestHttpClient.cs</Link>
+    </Compile>
+    <Compile Include="..\VSTS-Shared\Helpers\VSTSHelper.cs">
+      <Link>Shared\Helpers\VSTSHelper.cs</Link>
     </Compile>
     <Compile Include="..\VSTS-Shared\Interfaces\IRestHttpClient.cs">
       <Link>Shared\Interfaces\IRestHttpClient.cs</Link>
