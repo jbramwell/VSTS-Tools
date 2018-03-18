@@ -69,3 +69,27 @@ Download a folder named "MyProject/UnitTests" with Verbose set to ON:
 Download a file named "MyProject/UnitTests/UnitTests.cs" with Verbose set to ON:
 
     VSTS-Get -a MyAccount -t MyProject -p aq4atoiecgzpt7gtw54dlzfja7vlr3hbkm2kl2pkjmr32obr5juq -r "MyProject" -f "MyProject/UnitTests/UnitTests.cs" -d C:\Downloads -v
+
+## VSTS-Users
+Returns a list of VSTS users for a specific account. Along with the user's e-mail address the last date/time of system access as well as the user license type is returned.
+
+### Usage
+There are multiple command-line arguments for calling VSTS-Keep, including:
+
+|Name     |Required|Comments                                                                        |
+|---------|--------|--------------------------------------------------------------------------------|
+|-a       |Yes     |Specifies the VSTS account to use.                                              |
+|-u       |No      |Specifies the User ID used to sign into VSTS (optional if using a PAT).         |
+|-p       |Yes     |Specifies the password or Personal Access Token (PAT) used to sign into VSTS.   |
+|-h       |No      |Include a header line in the output.                                |
+|-q       |No      |Adds quotation marks to any items that include spaces.              |
+
+**Examples**
+
+Get a list of all VSTS users for a specific account:
+
+    VSTS-Users -a MyAccount -p 5lk5beqkqhyn7bbv2jco2aksojk7u43kdoikho3u5tlgsbzc6paq
+
+Get a list of all VSTS users for a specific account including a header line and quotes around any items with spaces:
+
+    VSTS-Users -a MyAccount -p 5lk5beqkqhyn7bbv2jco2aksojk7u43kdoikho3u5tlgsbzc6paq -h -q
