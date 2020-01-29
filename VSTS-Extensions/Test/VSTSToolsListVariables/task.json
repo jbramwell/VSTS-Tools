@@ -41,7 +41,7 @@
       "target": "sample.js",
       "argumentFormat": ""
     },
-    "PowerShell": {
+    "PowerShell3": {
       "target": "$(currentDirectory)\\sample.ps1",
       "argumentFormat": "",
       "workingDirectory": "$(currentDirectory)"

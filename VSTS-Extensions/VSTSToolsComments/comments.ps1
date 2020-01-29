@@ -1,7 +1,5 @@
-param (
-    [string]$comments,
-    [string]$includeCommentsInLog
-)
+[string]$comments = $env:INPUT_COMMENTS
+[string]$includeCommentsInLog = $env:INPUT_INCLUDECOMMENTSINLOG
 
 Write-Verbose "Entering: comments.ps1"
 Write-Verbose "  comments: $comments"

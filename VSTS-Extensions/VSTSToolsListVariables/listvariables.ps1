@@ -1,6 +1,4 @@
-param (
-    [string]$debugonly
-)
+[string]$debugonly = $env:INPUT_DEBUGONLY
 
 Write-Verbose "Entering: listvariables.ps1"
 Write-Verbose "  debugonly = $debugonly"

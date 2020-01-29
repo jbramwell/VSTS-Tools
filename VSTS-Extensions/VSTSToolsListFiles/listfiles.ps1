@@ -1,7 +1,5 @@
-param (
-    [string]$rootdir,
-    [string]$debugonly
-)
+[string]$rootdir = $env:INPUT_ROOTDIR
+[string]$debugonly = $env:INPUT_DEBUGONLY
 
 Write-Verbose "Entering: listfiles.ps1"
 Write-Verbose "  rootdir = $rootdir"

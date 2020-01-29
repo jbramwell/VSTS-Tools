@@ -67,7 +67,7 @@
 
   ],
   "execution": {
-    "PowerShell": {
+    "PowerShell3": {
       "target": "$(currentDirectory)\\stopbuild.ps1",
       "argumentFormat": "",
       "workingDirectory": "$(currentDirectory)"

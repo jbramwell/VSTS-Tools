@@ -1,7 +1,5 @@
-param (
-    [string]$cwd,
-    [string]$msg
-)
+[string]$cwd = $env:INPUT_CWD
+[string]$msg = $env:INPUT_MSG
 
 Write-Verbose 'Entering sample.ps1'
 Write-Verbose "cwd = $cwd"

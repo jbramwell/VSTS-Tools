@@ -1,8 +1,6 @@
-param (
-    [string]$leftOperand,
-    [string]$operator,
-    [string]$rightOperand
-)
+[string]$leftOperand = $env:INPUT_LEFTOPERAND
+[string]$operator = $env:INPUT_OPERATOR
+[string]$rightOperand = $env:INPUT_RIGHTOPERAND
 
 Write-Verbose "Entering: stopbuild.ps1"
 Write-Verbose "  leftOperand = $leftOperand"
