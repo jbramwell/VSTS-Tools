@@ -45,7 +45,7 @@
     }
   ],
   "execution": {
-    "PowerShell": {
+    "PowerShell3": {
       "target": "$(currentDirectory)\\listfiles.ps1",
       "argumentFormat": "",
       "workingDirectory": "$(currentDirectory)"

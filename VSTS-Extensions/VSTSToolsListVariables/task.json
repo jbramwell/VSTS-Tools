@@ -37,7 +37,7 @@
     }
   ],
   "execution": {
-    "PowerShell": {
+    "PowerShell3": {
       "target": "$(currentDirectory)\\listvariables.ps1",
       "argumentFormat": "",
       "workingDirectory": "$(currentDirectory)"

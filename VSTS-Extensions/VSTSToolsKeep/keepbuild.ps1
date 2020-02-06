@@ -1,7 +1,5 @@
-param (
-    [string]$targetbranch,
-    [string]$debugonly
-)
+[string]$targetbranch = $env:INPUT_TARGETBRANCH
+[string]$debugonly = $env:INPUT_DEBUGONLY
 
 Write-Verbose "Entering: keepbuild.ps1"
 Write-Verbose "  targetbranch: $targetbranch"
