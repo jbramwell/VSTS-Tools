@@ -41,6 +41,16 @@ namespace VSTSKeep
                         : "    Failed to set retention.");
                 }
             }
+            catch (System.Net.WebException ex)
+            {
+                Console.WriteLine(ex.Message);
+                if (ex.Message.Contains("(401) Unauthorized."))
+                {
+                    Console.WriteLine("VSTS-Keep requires access to the account's OAuth token in order to correctly set the keep forever config.");
+                    Console.WriteLine("Please go to this build definition's options tab and enable build scripts to access the OAuth token.");
+                }
+                parser.ShowUsage();
+            }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
