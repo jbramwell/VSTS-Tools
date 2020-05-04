@@ -23,8 +23,8 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
-    - name: Setup MSBuild Path
-      uses: warrenbuckley/Setup-MSBuild@v1
+    #- name: Setup MSBuild Path
+    #  uses: warrenbuckley/Setup-MSBuild@v1
        
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.2
