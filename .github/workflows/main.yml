@@ -33,7 +33,7 @@ jobs:
       run: nuget restore VSTS-Tools.sln
  
     - name: Build and Publish Web App
-      run: msbuild VSTS-Tools.sln /p:Configuration=Release
+      run: msbuild VSTS-Tools.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
   
     - name: Upload Artifact
       uses: actions/upload-artifact@v1.0.0
